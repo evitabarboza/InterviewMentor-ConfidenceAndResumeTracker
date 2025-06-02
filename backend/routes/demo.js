@@ -1,44 +1,51 @@
 const express = require('express');
 const router = express.Router();
-const supabase = require('../database/db'); // your Supabase client
+const { createClient } = require('@supabase/supabase-js');
+require('dotenv').config();
 
-// POST /api/login
+// Initialize Supabase client with service role key
+const supabase = createClient(
+  process.env.VITE_SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_ROLE_KEY
+);
+
+// POST /login
 router.post('/', async (req, res) => {
-  const { name, email } = req.body;
-
-  if (!name || !email) {
-    return res.status(400).json({ error: 'Both name and email are required' });
-  }
+  const { name, email, password } = req.body;
 
   try {
-    // Check if the user already exists
+    // 1. Check if user already exists
     const { data: existingUser, error: fetchError } = await supabase
-      .from('users')
+      .from('students')
       .select('*')
       .eq('email', email)
       .single();
 
     if (fetchError && fetchError.code !== 'PGRST116') {
-      // PGRST116 = no rows returned, which is fine
-      throw fetchError;
+      // Some real fetch error other than "no rows"
+      return res.status(500).json({ error: 'Database error while checking user.' });
     }
 
     if (existingUser) {
-      return res.status(200).json({ message: 'User logged in', user: existingUser });
+      // Email already exists
+      return res.status(409).json({ error: 'Email already exists.' });
     }
 
-    // Create new user if not found
+    // 2. Insert new user
     const { data: newUser, error: insertError } = await supabase
-      .from('users')
-      .insert([{ name, email }])
+      .from('students')
+      .insert([{ name, email, password }])
       .select()
       .single();
 
-    if (insertError) throw insertError;
+    if (insertError) {
+      return res.status(500).json({ error: 'Failed to create user.' });
+    }
 
-    res.status(201).json({ message: 'New user created and logged in', user: newUser });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(200).json({ message: 'User created successfully.', user: newUser });
+  } catch (err) {
+    console.error('Unexpected error:', err);
+    res.status(500).json({ error: 'Internal server error.' });
   }
 });
 
