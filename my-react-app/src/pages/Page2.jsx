@@ -1,11 +1,15 @@
 import React from 'react'
+import ExcelUpload from './ExcelUpload';
 
-const page2 = () => {
+const Page2 = () => {
   return (
     <div>
-       Welcome Member 2!Start Your work here.
+        <div className="App">
+          <h1 className="text-center text-2xl font-bold mt-6">Institution Dashboard</h1>
+          <ExcelUpload />
+        </div>
     </div>
   )
 }
 
-export default page2
+export default Page2
