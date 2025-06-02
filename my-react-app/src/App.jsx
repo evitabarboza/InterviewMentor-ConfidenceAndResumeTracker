@@ -5,6 +5,7 @@ import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
 import ConfidenceTracker from './pages/ConfidenceTracker';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
@@ -49,6 +50,16 @@ function App() {
       >
         Go to Member 4 Work
       </Link>
+     
+    </li>
+    <li>
+      <Link
+        to="/login"
+        className="px-4 py-2 border border-red-500 text-red-600 rounded hover:bg-red-100 transition duration-200"
+      >
+        Login
+      </Link>
+     
     </li>
   </ul>
 </nav>
@@ -59,6 +70,7 @@ function App() {
           <Route path="/member2" element={<Page2 />} />
           <Route path="/member3" element={<Page3 />} />
           <Route path="/member4" element={<ConfidenceTracker />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
     </Router>
