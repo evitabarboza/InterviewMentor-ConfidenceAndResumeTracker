@@ -1,7 +1,12 @@
+
+
 import React from "react";
 import { Row, Col, Card, Button, Badge } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function InterviewCard({ title, duration, description, level, icon, color }) {
+  const navigate = useNavigate();
+
   return (
     <Card className="shadow-sm mb-4">
       <Card.Body>
@@ -15,7 +20,7 @@ function InterviewCard({ title, duration, description, level, icon, color }) {
               {level}
             </Badge>
             <br />
-            <Button variant="primary">▶ Start Interview</Button>
+            <Button variant="primary" onClick={() => navigate("/interview")}>▶ Start Interview</Button>
           </div>
         </div>
       </Card.Body>
@@ -24,6 +29,8 @@ function InterviewCard({ title, duration, description, level, icon, color }) {
 }
 
 export default function MockInterviews() {
+  const navigate = useNavigate();
+
   return (
     <div>
       <div className="d-flex justify-content-between align-items-start mb-4">
@@ -76,15 +83,23 @@ export default function MockInterviews() {
       <h5 className="mt-5 mb-3">Practice Modules</h5>
       <Row className="g-3">
         {[
+          "C++",
+          "Figma",
+          "Firebase",
+          "Git",
+          "Google API's",
+          "React",
+          "React-Native",
+          "NodeJS",
+          "Python",
           "Data Structures & Algorithms",
-          "System Design Basics",
           "Behavioral Questions",
           "Communication Skills",
           "Confidence Building",
           "Body Language",
         ].map((topic) => (
           <Col md={4} key={topic}>
-            <Button variant="outline-secondary" className="w-100 text-start">
+            <Button variant="outline-secondary" className="w-100 text-start" onClick={() => navigate("/chat")}>
               {topic}
             </Button>
           </Col>

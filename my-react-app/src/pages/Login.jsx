@@ -23,7 +23,7 @@ const Login = () => {
         console.log('User Data:', data.user);
 
         // 3. Redirect to student dashboard after login
-        navigate('/studentDashboard');  
+        navigate('/studentDashboard');
         alert('Login successful!');
       } else {
         alert(data.error || 'Login failed');
@@ -72,7 +72,7 @@ const Login = () => {
             Login
           </button>
         </form>
-        <p className="text-xs text-center text-gray-400 mt-6">© 2025 InterviewMentor. All rights reserved.</p>
+        <p className="text-xs text-center text-gray-400 mt-6">© 2025 InterviewGuru. All rights reserved.</p>
       </div>
     </div>
   );

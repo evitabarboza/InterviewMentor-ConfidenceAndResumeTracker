@@ -7,6 +7,7 @@ import Performance from './Performance';
 import ResumeAnalysis from './ResumeAnalysis';
 import Profile from './Profile';
 import Settings from './Settings';
+import Page1 from "./Page1";
 
 const Layout = () => {
   return (
@@ -26,7 +27,7 @@ const StudentDashboard = () => {
     <Route index element={<Dashboard />} />
     <Route path="mockinterview" element={<MockInterviews />} />
     <Route path="performance" element={<Performance />} />
-    <Route path="resume-analysis" element={<ResumeAnalysis />} />
+    <Route path="resume-analysis" element={<Page1 />} />
     <Route path="profile" element={<Profile />} />
     <Route path="settings" element={<Settings />} />
     {/* Redirect unmatched paths under /studentDashboard to the dashboard */}

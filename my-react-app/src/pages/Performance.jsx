@@ -42,21 +42,6 @@ const PerformanceDashboard = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-2 bg-light vh-100 p-3">
-          <h5>Mock Interviews</h5>
-          <ul className="nav flex-column">
-            <li className="nav-item"><a className="nav-link active" href="#">Performance</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Resume Analysis</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Profile</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Settings</a></li>
-          </ul>
-          <div className="mt-auto">
-            <hr />
-            <strong>John Student</strong>
-            <br />
-            <small>CS Student</small>
-          </div>
-        </div>
 
         <div className="col-10 p-4">
           <div className="row">

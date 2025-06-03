@@ -10,7 +10,7 @@ const Sidebar = () => {
 
   return (
     <div className="bg-light vh-100 p-3" style={{ width: "250px" }}>
-      <h4 className="mb-4">InterviewMentor</h4>
+      <h4 className="mb-4">InterviewGuru</h4>
       <Nav activeKey={activePath} className="flex-column">
         <Nav.Link as={Link} to="/studentDashboard" eventKey="/dashboard">
           Dashboard
