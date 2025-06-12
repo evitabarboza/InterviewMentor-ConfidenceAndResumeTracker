@@ -7,7 +7,8 @@ CORS(app)  # Allow requests from frontend
 
 client = InferenceClient(
     model="mistralai/Mistral-7B-Instruct-v0.3",
-    token="f_XYQdFoUaLqzOyrILYJICmJTCvorQfGvycW"  # Replace with your actual token
+    token="your hugging face tokens"
+    # Replace with your actual token
 )
 
 @app.route("/chat", methods=["POST"])

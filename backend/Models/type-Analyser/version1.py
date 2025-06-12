@@ -228,7 +228,7 @@ CORS(app)
 
 client = InferenceClient(
     model="mistralai/Mistral-7B-Instruct-v0.3",
-    token="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"  # replace with your actual token
+    token="replace with your actual token"
 )
 
 embedder = SentenceTransformer("all-MiniLM-L6-v2")
