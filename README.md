@@ -43,13 +43,13 @@ An AI-powered interview preparation platform that analyzes user resumes, generat
 
 ## ⚙️ Architecture & Tech Stack
 
-```
-Frontend        Backend         AI / Cloud Services         Database
----------------------------------------------------------------------------
-Vite with React       Express.js      OpenAI (question gen)       Supabase (PostgreSQL)
-Bootstrap       REST API        Whisper (speech-to-text)    Supabase Auth
-React Video     Supabase SDK    MediaPipe (face detection)
-```
+
+| Frontend         | Backend      | AI / Cloud Services            | Database              |
+|------------------|--------------|--------------------------------|------------------------|
+| Vite with React  | Express.js   | OpenAI (question generation)   | Supabase (PostgreSQL) |
+| Bootstrap        | REST API     | Whisper (speech-to-text)       | Supabase Auth         |
+| React Video      | Supabase SDK | MediaPipe (face detection)     |                        |
+
 
 ---
 
