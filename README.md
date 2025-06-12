@@ -46,7 +46,7 @@ An AI-powered interview preparation platform that analyzes user resumes, generat
 ```
 Frontend        Backend         AI / Cloud Services         Database
 ---------------------------------------------------------------------------
-React.js        Express.js      OpenAI (question gen)       Supabase (PostgreSQL)
+Vite with React       Express.js      OpenAI (question gen)       Supabase (PostgreSQL)
 Bootstrap       REST API        Whisper (speech-to-text)    Supabase Auth
 React Video     Supabase SDK    MediaPipe (face detection)
 ```
@@ -59,7 +59,7 @@ React Video     Supabase SDK    MediaPipe (face detection)
 
 - Node.js ≥ 18  
 - Supabase Project (with service role key)  
-- OpenAI API Key  
+- HuggingFace API Key  
 - (Optional) Webcam and Mic  
 
 ### 🔧 Setup Instructions
@@ -84,7 +84,7 @@ Create `.env` in both `backend/` and `frontend/` folders:
 # backend/.env
 VITE_SUPABASE_URL=https://your-supabase-url.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
-OPENAI_API_KEY=your-openai-api-key
+API_KEY=api-key
 
 # frontend/.env
 REACT_APP_API_URL=http://localhost:4000
@@ -119,7 +119,7 @@ InterviewMentor/
 
 ### 2. Question Generation
 
-- OpenAI generates customized interview questions.
+- Inferenced LLM generates customized interview questions.
 - Questions are stored in the Supabase DB.
 
 ### 3. Mock Interview
@@ -139,7 +139,7 @@ InterviewMentor/
 | Component            | Description |
 |----------------------|-------------|
 | **Resume Parser**    | Extracts keywords and domains from uploaded resumes. |
-| **Question Engine**  | Uses GPT-based prompts to create questions. |
+| **Question Engine**  | Uses LLM-based prompts to create questions. |
 | **Interview Module** | Frontend component handles video/audio capture. |
 | **Evaluation Engine**| Uses Whisper for transcription and MediaPipe for confidence. |
 | **Feedback**         | Combines answer accuracy + confidence score to generate insights. |
@@ -166,7 +166,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🙌 Acknowledgements
 
-- [OpenAI](https://openai.com/) for GPT and Whisper APIs  
+- [Hugging Face](https://huggingface.co/) for LLM and Whisper APIs[OpenAI]  
 - [Supabase](https://supabase.com/) for backend and authentication  
 - [MediaPipe](https://mediapipe.dev/) for facial expression tracking  
 - [React-Bootstrap](https://react-bootstrap.github.io/) for UI components  
