@@ -2,7 +2,7 @@
 
 An AI-powered interview preparation platform that analyzes user resumes, generates tailored interview questions, conducts mock interviews (speech-based), and evaluates performance with confidence scoring and feedback.
 
----
+
 
 ## 🔧 Table of Contents
 
@@ -16,7 +16,7 @@ An AI-powered interview preparation platform that analyzes user resumes, generat
 8. [Contributing](#contributing)  
 9. [License](#license)
 
----
+
 
 ## 📌 Overview
 
@@ -28,7 +28,6 @@ An AI-powered interview preparation platform that analyzes user resumes, generat
 - Evaluating responses based on correctness and confidence (speech + video)
 - Providing performance feedback and tracking improvements
 
----
 
 ## 🚀 Features
 
@@ -39,7 +38,7 @@ An AI-powered interview preparation platform that analyzes user resumes, generat
 - 📊 Performance Reports and Analytics  
 - 🔐 Secure User Auth and Resume Storage  
 
----
+
 
 ## ⚙️ Architecture & Tech Stack
 
@@ -51,7 +50,7 @@ An AI-powered interview preparation platform that analyzes user resumes, generat
 | OpenCV [Video]   | Inferences   | MediaPipe (face detection)     |                        |
 
 
----
+
 
 ## 🛠️ Getting Started
 
@@ -90,7 +89,7 @@ API_KEY=api-key
 REACT_APP_API_URL=http://localhost:4000
 ```
 
----
+
 
 ## 📁 Project Structure
 
@@ -108,7 +107,7 @@ InterviewMentor/
 ├── README.md
 ```
 
----
+
 
 ## 🧪 Usage
 
@@ -132,7 +131,7 @@ InterviewMentor/
 - Evaluates answers based on keyword match and confidence score.
 - Scores are logged and visualized on the dashboard.
 
----
+
 
 ## ⚙️ How It Works
 
@@ -144,7 +143,7 @@ InterviewMentor/
 | **Evaluation Engine**| Uses Whisper for transcription and MediaPipe for confidence. |
 | **Feedback**         | Combines answer accuracy + confidence score to generate insights. |
 
----
+
 
 ## 🤝 Contributing
 
@@ -156,13 +155,12 @@ We welcome contributions of all kinds! To contribute:
 4. Push to the branch (`git push origin feature/your-feature`)  
 5. Create a Pull Request  
 
----
+
 
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
 
----
 
 ## 🙌 Acknowledgements
 
