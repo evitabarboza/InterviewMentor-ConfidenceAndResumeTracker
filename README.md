@@ -169,6 +169,4 @@ This project is licensed under the [MIT License](LICENSE).
 - [MediaPipe](https://mediapipe.dev/) for facial expression tracking  
 - [React-Bootstrap](https://react-bootstrap.github.io/) for UI components  
 
----
 
-> ✨ InterviewMentor – Level up your interviews with AI ✨
